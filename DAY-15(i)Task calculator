@@ -1,0 +1,303 @@
+Calculator Task
+
+My code:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+
+            background-color: rgb(21, 149, 247);
+
+
+        }
+
+        .container1{
+            width: 100%;
+            height: 100vh;
+        }
+        .container2{
+            width: 35%;
+            height: 78vh;
+            margin-top: 8%;
+            margin-left: 32%;
+            background-color: rgb(233, 241, 15);
+            border-radius: 20px;
+        }
+
+        .container3{
+
+            width: 90%;
+            height: 98px;
+            margin-top: 7%;
+            margin-left: 5%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container4{
+
+            width: 90%;
+            height: 98px;
+            margin-top: 0%;
+            margin-left: 5%;
+            display: flex;
+            justify-content: space-around;
+            }
+
+            .container5{
+
+            width: 90%;
+            height: 98px;
+            margin-top: 0%;
+            margin-left: 5%;
+            display: flex;
+            justify-content: space-around;
+            }
+
+            .container6{
+
+                width: 90%;
+                height: 98px;
+                margin-top: 0%;
+                margin-left: 5%;
+                display: flex;
+                justify-content: space-around;
+                }
+
+                .container7{
+
+                    width: 90%;
+                    height: 98px;
+                    margin-top: 0%;
+                    margin-left: 5%;
+                    display: flex;
+                    justify-content: space-around;
+                    }           
+
+        .button{
+            cursor: pointer;
+            border: 0;   
+            height: 68px;
+            width: 68px;
+            background-color: rgb(34, 10, 10);
+            font-family:'Courier New', Courier, monospace;
+            font-size: 36px;
+            color: rgb(10, 236, 70);
+            font-weight:bolder;
+            border-radius: 40px;
+            box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.2) , 5px 5px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        #equal{
+
+            border: 0;   
+            height: 68px;
+            width: 190px;
+            background-color: rgb(18, 7, 26);
+            font-family:'Courier New', Courier, monospace;
+            font-size: 36px;
+            color: rgb(10, 236, 70);
+            font-weight:bolder;
+            border-radius: 40px;
+
+
+        }  
+        
+        #title{
+
+            margin-left: 40%;
+
+        }
+
+
+        #result{
+            border: 0;
+            height: 60px;
+            width: 400px;
+            align-content: center;
+            margin-top: 7%;
+            margin-left: 10%;
+            border-radius: 15px;
+            background-color: rgb(10, 1, 18);
+            color: aqua;
+            font-size: 40px;
+            font-weight: bolder;
+            padding-left: 3%;
+            letter-spacing: 10px;
+        }
+#description{
+
+        margin-top: 1%;
+        width: 90%;
+        height: 5px;
+        font-size: medium;
+        font-weight: bolder;
+        margin-left: 40%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 id="title">Calculator</h1>
+    <P id = "description"><i>This is a basic task of Calculator</i></P>
+    <div class = "container1">
+        <div class = "container2"> 
+            <input type="text" class = "dis" id="result">
+            <div class = container3>
+                <button class = "button" id="clear" value="AC">AC</button>
+                <button class = "button" id="DE" value="DE">DE</button>
+                <button class = "button" id="dot" value=".">.</button>
+                <button class = "button" id="slash" value="/">/</button>
+            </div>
+
+            <div class = container4>
+                <button class = "button" id="7" value="7">7</button>
+                <button class = "button" id="8" value="8">8</button>
+                <button class = "button" id="9" value="9">9</button>
+                <button class = "button" id="star" value="*">*</button>
+            </div>
+
+            <div class = container5>
+                <button class = "button" id="4" value="4">4</button>
+                <button class = "button" id="5" value="5">5</button>
+                <button class = "button" id="6" value="6">6</button>
+                <button class = "button" id="subtract" value="-">-</button>
+            </div>
+            
+            <div class = container6>
+                <button class = "button" id="1" value="1">1</button>
+                <button class = "button" id="2" value="2">2</button>
+                <button class = "button" id="3" value="3">3</button>
+                <button class = "button" id="add" value="+">+</button>
+            </div>
+
+            <div class = container7>
+                <button class = "button" id="zero2" value="00">00</button>
+                <button class = "button" id="zero" value="0">0</button>
+                <button class = "button" id="equal" value="=">=</button>
+                
+            </div>
+
+        </div>
+         
+    </div>
+
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+
+<script>
+
+    document.getElementById("7").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "7"
+    });
+
+    document.getElementById("8").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "8"
+    });
+
+    document.getElementById("9").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "9"
+    });
+
+    document.getElementById("4").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "4"
+    });
+
+    document.getElementById("5").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "5"
+    });
+    
+    document.getElementById("6").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "6"
+    });
+
+    document.getElementById("1").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "1"
+    });
+   
+    document.getElementById("2").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "2"
+    });
+
+    document.getElementById("3").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "3"
+    });
+
+    document.getElementById("clear").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value = " "
+    });
+
+    document.getElementById("DE").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value = document.getElementById("result").value.slice(0,-1)
+    });
+
+    document.getElementById("zero2").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "00"
+    });
+
+    document.getElementById("zero").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "0"
+    });
+
+    document.getElementById("dot").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "."
+    });
+
+    document.getElementById("slash").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "/"
+    });
+
+    document.getElementById("subtract").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "-"
+    });
+
+    document.getElementById("add").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "+"
+    });
+    
+    document.getElementById("star").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value += "*"
+    });
+
+    document.getElementById("equal").addEventListener("click", ()=>
+    {
+        document.getElementById("result").value = eval(document.getElementById("result").value)
+    });
+
+    
+    
+
+</script>
+
+
+</body>
+</html>
